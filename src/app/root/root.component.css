@@ -1,0 +1,104 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home-container {
+  background: #add8e6;
+  height: 100vh;
+  overflow: auto;
+}
+
+.home-header {
+  color: black;
+  padding-top: 12px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(360deg, #add8e6, #6896a6);
+}
+
+.add-button {
+  margin-right: 8px;
+}
+
+.buttons {
+  height: 32px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.logout-button {
+  width: 50px;
+  height: 24px;
+}
+
+.buttons:hover {
+  color: white;
+  background: black;
+}
+
+.google:hover {
+  background: linear-gradient(145deg, #4285f4, #34a853, #fbbc05, #ea4335);
+}
+
+.sign-in-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-inputs {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #607a83;
+}
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-login {
+  width: 360px;
+  margin: auto;
+}
+
+.container-margin {
+  margin-top: 12px;
+}
+
+label.container-margin {
+  font-weight: bold;
+}
+
+legend {
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+
+hr {
+  height: 2px;
+}
+
+.hr-bar {
+  height: 2px;
+  margin-top: 32px;
+}
+
+.fieldset-box {
+  padding: 16px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border: 2px solid #93929291;
+}
+
+.container-exams {
+  padding: 24px;
+  width: 580px;
+  border: 2px solid black;
+  margin: auto;
+  border-radius: 8px;
+}

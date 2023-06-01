@@ -1,0 +1,67 @@
+<div class="home-container">
+  <header class="home-header">
+    <h1>Consulta Tracker</h1>
+  </header>
+
+  <div class="container-login" *ngIf="!auth.user">
+    <form>
+      <fieldset class="fieldset-box">
+        <legend>Login</legend>
+        <hr />
+        <div class="login-div">
+          <label class="container-margin">Email</label>
+          <input
+            class="login-inputs"
+            type="text"
+            name="email"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="login-div">
+          <label class="container-margin">Senha</label>
+          <input
+            class="login-inputs"
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+          />
+        </div>
+        <hr class="hr-bar" />
+        <div class="sign-in-buttons container-margin">
+          <button
+            class="buttons"
+            (click)="auth.emailSignin(this.email, this.password)"
+          >
+            Login with e-mail
+          </button>
+          <span style="font-size: x-large;">|</span>
+          <button class="buttons google" (click)="auth.googleSignin()">
+            Login with Google
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div *ngIf="auth.error" style="color: red">
+    {{ auth.error }}
+  </div>
+
+  <div class="container-exams" *ngIf="auth.user">
+    Bem vindo, logado como: <b>{{ auth.user.email }}</b> |
+    <button class="logout-button buttons" (click)="auth.signOut()">Sair</button>
+    <hr />
+
+    <h2>Agendar Consulta</h2>
+
+    <button (click)="goToConsult()" class="buttons add-button">
+      Adicionar Consulta
+    </button>
+    <button class="buttons add-button" (click)="showTable()">
+      Listar Consultas
+    </button>
+    <button (click)="backHome()" class="buttons">Voltar</button>
+
+    <router-outlet *ngIf="hide"></router-outlet>
+  </div>
+</div>
